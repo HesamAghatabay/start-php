@@ -14,29 +14,31 @@
         [
             'name' => 'ss0',
             'auther' => 'qq0',
-            'website' => 'zz0'
+            'website' => 'https://examlpe.com0'
         ],
         [
             'name' => 'ss1',
             'auther' => 'qq1',
-            'website' => 'zz1'
+            'website' => 'https://examlpe.com1'
         ],
         [
             'name' => 'ss2',
             'auther' => 'qq2',
-            'website' => 'zz2'
+            'website' => 'https://examlpe.com2'
         ],
         [
             'name' => 'ss3',
             'auther' => 'qq3',
-            'website' => 'zz3'
+            'website' => 'https://examlpe.com3'
         ]
     ];
     ?>
     <ul>
         <?php
         foreach ($books as $book) {
-            echo "<li> name is :{$book['name']} and Auther is :{$book['auther']} and that website addres is : {$book['website']}</li>";
+            echo "<li> name is :{$book['name']}
+             and Auther is :{$book['auther']}
+              and that website addres is :<a href=<?php{$book['website']}?>{$book['website']}</a></li>";
         }
         ?>
     </ul>
