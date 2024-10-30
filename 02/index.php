@@ -28,17 +28,24 @@
         ],
         [
             'name' => 'ss3',
-            'auther' => 'qq3',
+            'auther' => 'qq0',
             'website' => 'https://examlpe.com3'
+        ],
+        [
+            'name' => 'ss4',
+            'auther' => 'qq4',
+            'website' => 'https://examlpe.com4'
         ]
     ];
     ?>
     <ul>
         <?php
         foreach ($books as $book) {
-            echo "<li> name is :{$book['name']}
+            if ($book['auther'] == 'qq0') {
+                echo "<li> name is :{$book['name']}
              and Auther is :{$book['auther']}
               and that website addres is :<a href=<?php{$book['website']}?>{$book['website']}</a></li>";
+            }
         }
         ?>
     </ul>
