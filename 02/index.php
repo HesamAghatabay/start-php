@@ -37,15 +37,23 @@
             'website' => 'https://examlpe.com4'
         ]
     ];
+    function filterdbyauther($books, $auther)
+    {
+        $filterdbooks = [];
+        foreach ($books as $book) {
+            if ($book['auther'] == $auther) {
+                array_push($filterdbooks, $book);
+            }
+        }
+        return $filterdbooks;
+    }
     ?>
 
     <ul>
-        <?php foreach ($books as $book) : ?>
-            <?php if ($book['auther'] == 'qq0') : ?>
-                <li>
-                    <p><?php echo 'name is : ' . $book['name'] . 'auther is : ' . $book['auther'] . 'website is : ' ?> <span>.<a href="<?php $book['website'] ?>"> website link</a></span></p>
-                </li>
-            <?php endif; ?>
+        <?php foreach (filterdbyauther($books, 'qq0') as $book) : ?>
+            <li>
+                <p><?php echo 'name is : ' . $book['name'] . 'auther is : ' . $book['auther'] . 'website is : ' ?> <span>.<a href="<?php $book['website'] ?>"> website link</a></span></p>
+            </li>
         <?php endforeach; ?>
     </ul>
 
