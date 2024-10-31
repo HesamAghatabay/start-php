@@ -38,6 +38,18 @@
         ]
     ];
     ?>
+
+    <ul>
+        <?php foreach ($books as $book) : ?>
+            <?php if ($book['auther'] == 'qq0') : ?>
+                <li>
+                    <p><?php echo 'name is : ' . $book['name'] . 'auther is : ' . $book['auther'] . 'website is : ' ?> <span>.<a href="<?php $book['website'] ?>"> website link</a></span></p>
+                </li>
+            <?php endif; ?>
+        <?php endforeach; ?>
+    </ul>
+
+    <br><br><br><br><br><br><br><br><br>
     <ul>
         <?php
         foreach ($books as $book) {
